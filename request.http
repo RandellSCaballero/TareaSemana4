@@ -1,0 +1,36 @@
+###
+POST http://localhost:3000/api/canciones HTTP/1.1
+Content-Type: application/json
+
+{
+    "cancion": "Fuiste Tu",
+    "artista": "Ricardo Arjona",
+    "album": "Independiente",
+    "anio": 2011,
+    "pais": "Guatemala"
+}
+
+###
+GET http://localhost:3000/api/canciones HTTP/1.1
+###
+GET http://localhost:3000/api/canciones/entre/anio?year1=2006&year2=2012 HTTP/1.1
+
+###
+GET http://localhost:3000/api/cancionesArtista/RHCP HTTP/1.1
+###
+GET http://localhost:3000/api/canciones/3 HTTP/1.1
+
+###
+PUT http://localhost:3000/api/canciones/6302f53fcee197761d616761 HTTP/1.1
+Content-Type: application/json
+
+{
+    "cancion": "Stadium Arcadium",
+    "artista": "RHCP",
+    "album": "Stadium Arcadium",
+    "anio": 2006,
+    "pais": "USA"
+}
+
+###
+DELETE HTTP/1.1 http://localhost:3000/api/canciones/6302f5a0cee197761d616765 HTTP/1.1
